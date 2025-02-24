@@ -146,7 +146,7 @@ if selected == 'Fiscal Collapse Check':
                     st.write("Uploaded Data:")
                     st.write(df)
                 if st.button("Predict"):
-                    test = pd.read_csv('test_f.csv')
+                    test = df
                     test = test.drop("X4", axis=1)
                     test = test.drop("X13", axis=1)
                     test = test.drop("X16", axis=1)
