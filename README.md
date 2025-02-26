@@ -11,6 +11,7 @@ App link - https://bankruptcy-wv2iiuquqqj9ozgmmjtofm.streamlit.app/
 ## Machine Learning Models Used
 
 The project employs different models to predict the bankruptcy status of companies:
+(Please refer to Bankruptcy_all_final.ipynb for training code)
 
 - **LSTM (Long Short-Term Memory)**
 - **RNN (Recurrent Neural Networks)**
