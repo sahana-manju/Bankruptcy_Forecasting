@@ -19,7 +19,7 @@ The project employs different models to predict the bankruptcy status of compani
 - **RNN (Recurrent Neural Networks)**
 - **Transformers**
 
-Among these, **LSTM** has provided the best results, achieving an accuracy of **94%**.
+Among these, **LSTM** has provided the best results, achieving an Accuracy of **99%** and F1 Score of **92.3%**.
 
 ## Website Functionalities
 
