@@ -6,6 +6,8 @@ This project aims to develop a predictive model that uses financial, liabilities
 
 The target variable, `status_label`, classifies companies into either **'Alive'** or **'Failed'**, reflecting their bankruptcy status for the next 5 years.
 
+Kaggle Dataset Link - https://www.kaggle.com/datasets/utkarshx27/american-companies-bankruptcy-prediction-dataset
+
 App link - https://bankruptcy-wv2iiuquqqj9ozgmmjtofm.streamlit.app/
 
 ## Machine Learning Models Used
