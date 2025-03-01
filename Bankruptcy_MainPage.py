@@ -16,7 +16,7 @@ df_bank = pd.read_csv('american_bankruptcy.csv')
 image_url = '''
     <style>
     [data-testid="stAppViewContainer"] {
-    background-image: url('https://images.unsplash.com/photo-1647462652019-72bdb84235ea?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxyYW5kb218MHx8fHx8fHx8MTcxMzI3OTI4Mg&ixlib=rb-4.0.3&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=1080');
+  
     background-size: cover;
     background-repeat: no-repeat;
     }
@@ -62,7 +62,7 @@ if selected == 'Fiscal Stats Gallery':
     total_x14 = df_bank['X14'].sum()
 
     # Data for the pie chart
-    labels = ['X18', 'X14']
+    labels = ['Total Operating Expenses', 'Total Current Liabilities']
     values = [total_x18, total_x14]
     colors = ['#FF9999', '#66B3FF']  # Custom colors for the pie chart
 
@@ -109,7 +109,7 @@ if selected == 'Fiscal Stats Gallery':
 
     fig = px.bar(df_bank, x='X1', y='X10',
             barmode='group',
-            title="Comparison of Current Assets and Total Assets by Company")
+            title="Comparison of Current Assets and Total Assets by Company",labels={'X1': 'Current Assets', 'X10': 'Total Assets'})
 
     # Display the chart in Streamlit
     st.plotly_chart(fig, use_container_width=True)
@@ -122,6 +122,8 @@ if selected == 'Fiscal Stats Gallery':
     plt.figure(figsize=(10, 4))
     ax = sns.lineplot(data=filtered_df, x='year', y='X6', hue='status_label')
     plt.title("The trend for Company C_1")
+    # Set custom y-axis label for 'X6'
+    plt.ylabel("Net Income")  # Replace 'X6' with "Net Income"
 
     # Improve the x-axis label readability
     plt.xticks(rotation=45)  # Rotate labels to prevent overlap
